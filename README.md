@@ -1,1 +1,3 @@
-# project_logicae
+<p align="center">
+ logicae
+</p>
