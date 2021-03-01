@@ -8,15 +8,49 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "actor",
+"language": "GDScript",
+"path": "res://actor.gd"
+}, {
+"base": "actor",
+"class": "player",
+"language": "GDScript",
+"path": "res://player.gd"
+} ]
 _global_script_class_icons={
-
+"actor": "",
+"player": ""
 }
 
 [application]
 
 config/name="Logicæ"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=640
+window/size/height=360
+window/stretch/mode="2d"
+
+[input]
+
+e={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+r={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":82,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[physics]
+
+2d/default_gravity=900
 
 [rendering]
 
