@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scr/user_interface/_logo_2.gd" type="Script" id=1]
+[ext_resource path="res://assets/art/menu_and_ui/logo_latarias/logo_end/logo_lataria.png" type="Texture" id=2]
+
+[node name="logo" type="CanvasLayer"]
+
+[node name="_logo" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="_logo"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="_logo"]
+margin_right = 426.0
+margin_bottom = 240.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="_logo"]
+margin_left = 98.0
+margin_top = 4.0
+margin_right = 524.0
+margin_bottom = 244.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="_logo/Timer" to="_logo" method="_on_Timer_timeout"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/chest.png-b8f9f58adb3d6d26c987229a4bc3bee6.stex"
+path="res://.import/chest.png-86519e8039cce939a0ed19a3839c2409.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/game/custom/chest.png"
-dest_files=[ "res://.import/chest.png-b8f9f58adb3d6d26c987229a4bc3bee6.stex" ]
+source_file="res://assets/art/game/sprites/custom/chest.png"
+dest_files=[ "res://.import/chest.png-86519e8039cce939a0ed19a3839c2409.stex" ]
 
 [params]
 

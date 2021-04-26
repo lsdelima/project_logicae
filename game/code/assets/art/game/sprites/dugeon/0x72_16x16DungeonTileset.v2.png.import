@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0x72_16x16DungeonTileset.v2.png-b41ccac0a993e6a0f4ba88d4d41671ff.stex"
+path="res://.import/0x72_16x16DungeonTileset.v2.png-668f33e1804b91a1dd9865ba79b626a3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/game/dugeon/0x72_16x16DungeonTileset.v2.png"
-dest_files=[ "res://.import/0x72_16x16DungeonTileset.v2.png-b41ccac0a993e6a0f4ba88d4d41671ff.stex" ]
+source_file="res://assets/art/game/sprites/dugeon/0x72_16x16DungeonTileset.v2.png"
+dest_files=[ "res://.import/0x72_16x16DungeonTileset.v2.png-668f33e1804b91a1dd9865ba79b626a3.stex" ]
 
 [params]
 

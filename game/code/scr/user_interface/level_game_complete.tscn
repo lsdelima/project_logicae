@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scr/user_interface/_logo_final.gd" type="Script" id=1]
+[ext_resource path="res://assets/theme/user_interface.tres" type="Theme" id=2]
+
+[node name="logo" type="CanvasLayer"]
+
+[node name="_logo" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="_logo"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="_logo"]
+margin_right = 426.0
+margin_bottom = 240.0
+color = Color( 0.113725, 0.129412, 0.172549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="_logo"]
+margin_right = 424.0
+margin_bottom = 184.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="_logo/CenterContainer"]
+margin_left = 29.0
+margin_top = 24.0
+margin_right = 395.0
+margin_bottom = 159.0
+theme = ExtResource( 2 )
+text = "Parabéns! 
+Todas as portas lógicas foram instaladas... 
+Parece que esse é o fim...
+Obrigado por jogar Logicæ...
+tchau.
+"
+align = 1
+[connection signal="timeout" from="_logo/Timer" to="_logo" method="_on_Timer_timeout"]

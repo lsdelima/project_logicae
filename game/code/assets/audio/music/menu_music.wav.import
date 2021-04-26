@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/menu_music.wav-7614198043c57d3026ef8371b25cfb63.sample"
+
+[deps]
+
+source_file="res://assets/audio/music/menu_music.wav"
+dest_files=[ "res://.import/menu_music.wav-7614198043c57d3026ef8371b25cfb63.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -9,42 +9,102 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody2D",
+"base": "Reference",
 "class": "actor",
 "language": "GDScript",
-"path": "res://actor.gd"
+"path": "res://scr/actors/actor.gd"
+}, {
+"base": "RigidBody2D",
+"class": "gate",
+"language": "GDScript",
+"path": "res://scr/objects/gate.gd"
+}, {
+"base": "gate",
+"class": "gate_and",
+"language": "GDScript",
+"path": "res://scr/objects/gate_and.gd"
+}, {
+"base": "gate",
+"class": "gate_nand",
+"language": "GDScript",
+"path": "res://scr/objects/gate_nand.gd"
+}, {
+"base": "gate",
+"class": "gate_nor",
+"language": "GDScript",
+"path": "res://scr/objects/gate_nor.gd"
+}, {
+"base": "gate",
+"class": "gate_not",
+"language": "GDScript",
+"path": "res://scr/objects/gate_not.gd"
+}, {
+"base": "gate",
+"class": "gate_or",
+"language": "GDScript",
+"path": "res://scr/objects/gate_or.gd"
+}, {
+"base": "gate",
+"class": "gate_xnor",
+"language": "GDScript",
+"path": "res://scr/objects/gate_xnor.gd"
+}, {
+"base": "gate",
+"class": "gate_xor",
+"language": "GDScript",
+"path": "res://scr/objects/gate_xor.gd"
+}, {
+"base": "Node2D",
+"class": "pedestal_three",
+"language": "GDScript",
+"path": "res://scr/objects/pedestal_three_type_a.gd"
+}, {
+"base": "Node2D",
+"class": "pedestal_two",
+"language": "GDScript",
+"path": "res://scr/objects/pedestal_two_type_a.gd"
 }, {
 "base": "actor",
 "class": "player",
 "language": "GDScript",
-"path": "res://player.gd"
+"path": "res://scr/actors/player.gd"
 } ]
 _global_script_class_icons={
 "actor": "",
+"gate": "",
+"gate_and": "",
+"gate_nand": "",
+"gate_nor": "",
+"gate_not": "",
+"gate_or": "",
+"gate_xnor": "",
+"gate_xor": "",
+"pedestal_three": "",
+"pedestal_two": "",
 "player": ""
 }
 
 [application]
 
 config/name="Logicæ"
+run/main_scene="res://scr/user_interface/level_gbit.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
+config/quit_on_go_back=false
 
 [display]
 
-window/size/width=640
-window/size/height=360
+window/size/width=426
+window/size/height=240
+window/size/fullscreen=true
 window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [input]
 
-e={
+ui_action={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
- ]
-}
-r={
-"deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":82,"unicode":0,"echo":false,"script":null)
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"unicode":0,"echo":false,"script":null)
  ]
 }
 
@@ -57,4 +117,3 @@ r={
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"

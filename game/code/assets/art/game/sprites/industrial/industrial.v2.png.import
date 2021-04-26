@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/industrial.v2.png-132df12a5f7af7885e5dae64ad81044b.stex"
+path="res://.import/industrial.v2.png-7d78bcc1e2aef2c9dd88867dcac31585.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/game/industrial/industrial.v2.png"
-dest_files=[ "res://.import/industrial.v2.png-132df12a5f7af7885e5dae64ad81044b.stex" ]
+source_file="res://assets/art/game/sprites/industrial/industrial.v2.png"
+dest_files=[ "res://.import/industrial.v2.png-7d78bcc1e2aef2c9dd88867dcac31585.stex" ]
 
 [params]
 

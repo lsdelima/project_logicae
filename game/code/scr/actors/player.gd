@@ -4,14 +4,9 @@ extends actor
 const UP = Vector2(0,-1)
 const ACCELERATION = 30
 var can_pick = true
-
 onready var animation_player = $animation
 
-
-
 func _physics_process(_delta):
-	print(_velocity)
-	
 	_velocity.y += gravity * _delta
 	var friction = false
 	
@@ -32,16 +27,17 @@ func _physics_process(_delta):
 	if is_on_floor(): 
 		if Input.is_action_just_pressed("ui_up"):
 			_velocity.y = -speed.y
+			$jump.play()
 		if friction == true:
 			_velocity.x = lerp(_velocity.x , 0, 0.2)
 	else: 
 		if _velocity.y > 0:
-			anim_switch("")
+			anim_switch("fall")
 		else:
 			anim_switch("jump")
 		if friction == true:
 			_velocity.x = lerp(_velocity.x , 0, 0.6)
-
+			
 	_velocity = move_and_slide(_velocity, UP)
 
 

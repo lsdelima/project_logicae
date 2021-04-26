@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/art/menu_and_ui/logo_gbit/logo_end/logo_gbit.png" type="Texture" id=1]
+[ext_resource path="res://scr/user_interface/_logo.gd" type="Script" id=2]
+
+[node name="logo" type="CanvasLayer"]
+
+[node name="_logo" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="_logo"]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="_logo"]
+margin_right = 426.0
+margin_bottom = 240.0
+color = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="_logo"]
+margin_left = 122.0
+margin_top = 27.0
+margin_right = 548.0
+margin_bottom = 267.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="_logo/Timer" to="_logo" method="_on_Timer_timeout"]

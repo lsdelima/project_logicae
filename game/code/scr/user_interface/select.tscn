@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/theme/user_interface.tres" type="Theme" id=1]
+[ext_resource path="res://scr/user_interface/_select.gd" type="Script" id=2]
+
+[node name="select" type="CanvasLayer"]
+
+[node name="_select" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="_select"]
+margin_right = 426.0
+margin_bottom = 240.0
+color = Color( 0.113725, 0.129412, 0.172549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="_select"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="_select"]
+margin_left = 108.0
+margin_top = 205.0
+margin_right = 328.0
+margin_bottom = 245.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="retornar" type="Button" parent="_select/VBoxContainer"]
+margin_right = 220.0
+margin_bottom = 28.0
+theme = ExtResource( 1 )
+text = "Voltar ao menu principal"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="_select"]
+margin_left = 108.0
+margin_top = 64.0
+margin_right = 328.0
+margin_bottom = 96.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpinBox" type="SpinBox" parent="_select/HBoxContainer"]
+margin_left = 41.0
+margin_right = 115.0
+margin_bottom = 32.0
+theme = ExtResource( 1 )
+min_value = 1.0
+max_value = 27.0
+value = 1.0
+align = 1
+
+[node name="jogar" type="Button" parent="_select/HBoxContainer"]
+margin_left = 119.0
+margin_right = 179.0
+margin_bottom = 32.0
+theme = ExtResource( 1 )
+text = "Jogar"
+
+[node name="Label" type="Label" parent="_select"]
+margin_left = 108.0
+margin_top = 8.0
+margin_right = 328.0
+margin_bottom = 28.0
+theme = ExtResource( 1 )
+text = "SELETOR DE NÍVEL"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="_select"]
+margin_left = 70.0
+margin_top = 128.0
+margin_right = 404.0
+margin_bottom = 148.0
+theme = ExtResource( 1 )
+text = "Selecione um nível entre o 1º e o 27º"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="_select/VBoxContainer/retornar" to="_select" method="_on_retornar_pressed"]
+[connection signal="pressed" from="_select/HBoxContainer/jogar" to="_select" method="_on_jogar_pressed"]

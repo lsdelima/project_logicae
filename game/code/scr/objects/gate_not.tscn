@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/art/game/sprites/custom/gate_not.png" type="Texture" id=1]
+[ext_resource path="res://scr/objects/gate_not.gd" type="Script" id=2]
+[ext_resource path="res://assets/art/game/sprites/custom/select.png" type="Texture" id=3]
+[ext_resource path="res://assets/audio/sfx/drop.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/sfx/select.wav" type="AudioStream" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "select"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite_iron:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 180.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7, 7 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 11.0
+
+[node name="gate_not" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="sprite_gate" type="Sprite" parent="."]
+light_mask = 2
+position = Vector2( 0, -1 )
+texture = ExtResource( 1 )
+vframes = 4
+
+[node name="sprite_iron" type="Sprite" parent="."]
+light_mask = 2
+rotation = 3.14159
+texture = ExtResource( 3 )
+
+[node name="animation" type="AnimationPlayer" parent="."]
+anims/select = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
+position = Vector2( -0.0001875, 0 )
+shape = SubResource( 2 )
+
+[node name="detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector"]
+light_mask = 3
+position = Vector2( 0, -0.5 )
+shape = SubResource( 3 )
+
+[node name="select" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
+
+[node name="drop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -25.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gate_and.png-a7fe8133f940f84b23a14f67b144d55b.stex"
+path="res://.import/gate_and.png-a8d75bc1bafc47cab9ee43b367e08fce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/game/custom/gate_and.png"
-dest_files=[ "res://.import/gate_and.png-a7fe8133f940f84b23a14f67b144d55b.stex" ]
+source_file="res://assets/art/game/sprites/custom/gate_and.png"
+dest_files=[ "res://.import/gate_and.png-a8d75bc1bafc47cab9ee43b367e08fce.stex" ]
 
 [params]
 

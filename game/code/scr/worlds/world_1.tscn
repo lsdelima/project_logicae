@@ -1,0 +1,152 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scr/objects/gate_not.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scr/objects/pedestal_two_type_a.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scr/level/dialog_text.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scr/level/door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scr/level/background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scr/level/sign.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scr/actors/player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scr/user_interface/pause.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scr/level/wire_disabled.tres" type="TileSet" id=10]
+[ext_resource path="res://scr/level/wire_activated.tres" type="TileSet" id=11]
+[ext_resource path="res://assets/art/game/tileset/game.tres" type="TileSet" id=12]
+[ext_resource path="res://scr/level/wire_activated.gd" type="Script" id=13]
+
+[node name="world_1" type="Node"]
+
+[node name="background" parent="." instance=ExtResource( 5 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 3
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( -65527, 4, 0, -65526, 5, 0, -65525, 5, 0, -65524, 5, 0, -65523, 5, 0, -65522, 5, 0, -65521, 5, 0, -65520, 5, 0, -65519, 6, 0, 9, 4, 0, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 14, 5, 0, 15, 5, 0, 16, 5, 0, 17, 6, 0, 65545, 4, 0, 65546, 6, 0, 65552, 7, 0, 65553, 6, 0, 131072, 4, 0, 131073, 5, 0, 131074, 5, 0, 131075, 5, 0, 131076, 5, 0, 131077, 5, 0, 131078, 5, 0, 131079, 5, 0, 131080, 5, 0, 131081, 5, 0, 131082, 6, 0, 131088, 4, 0, 131089, 5, 0, 131090, 5, 0, 131091, 5, 0, 131092, 5, 0, 131093, 5, 0, 131094, 5, 0, 131095, 5, 0, 131096, 5, 0, 131097, 5, 0, 131098, 6, 0, 196608, 4, 0, 196609, 5, 0, 196610, 5, 0, 196611, 5, 0, 196612, 5, 0, 196613, 5, 0, 196614, 5, 0, 196615, 5, 0, 196616, 5, 0, 196617, 5, 0, 196618, 6, 0, 196624, 4, 0, 196625, 5, 0, 196626, 5, 0, 196627, 5, 0, 196628, 5, 0, 196629, 5, 0, 196630, 5, 0, 196631, 5, 0, 196632, 5, 0, 196633, 5, 0, 196634, 6, 0, 262144, 7, 0, 262153, 4, 0, 262154, 6, 0, 262160, 7, 0, 262161, 6, 0, 262170, 7, 0, 327680, 7, 0, 327689, 4, 0, 327690, 6, 0, 327692, 20, 0, 327693, 37, 0, 327694, 36, 0, 327696, 7, 0, 327697, 6, 0, 327706, 7, 0, 393216, 7, 0, 393225, 4, 0, 393226, 6, 0, 393232, 7, 0, 393233, 6, 0, 393242, 7, 0, 458752, 7, 0, 458778, 7, 0, 524288, 7, 0, 524314, 7, 0, 589824, 7, 0, 589836, 20, 0, 589837, 37, 0, 589838, 21, 0, 589850, 7, 0, 655360, 7, 0, 655386, 7, 0, 720896, 7, 0, 720922, 7, 0, 786432, 7, 0, 786458, 7, 0, 851968, 7, 0, 851977, 0, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 3, 0, 851994, 7, 0, 917504, 4, 0, 917505, 1, 0, 917506, 1, 0, 917507, 1, 0, 917508, 1, 0, 917509, 1, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 5, 0, 917514, 5, 0, 917515, 5, 0, 917516, 5, 0, 917517, 5, 0, 917518, 5, 0, 917519, 5, 0, 917520, 5, 0, 917521, 5, 0, 917522, 2, 0, 917523, 2, 0, 917524, 2, 0, 917525, 2, 0, 917526, 2, 0, 917527, 2, 0, 917528, 2, 0, 917529, 2, 0, 917530, 6, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 10 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 4
+collision_mask = 2147483652
+format = 1
+tile_data = PoolIntArray( 131062, 4, 0, 720908, 0, 0, 720909, 1, 0, 720910, 3, 0, 786435, 0, 0, 786436, 1, 0, 786437, 9, 0, 786438, 9, 0, 786439, 9, 0, 786440, 9, 0, 786441, 1, 0, 786442, 9, 0, 786443, 9, 0, 786444, 10, 0, 786446, 8, 0, 786447, 9, 0, 786449, 9, 0, 786450, 3, 0, 786453, 0, 0, 786454, 9, 0, 786455, 1, 0, 851971, 4, 0, 851986, 8, 0, 851987, 9, 0, 851988, 9, 0, 851989, 10, 0 )
+
+[node name="TileMap3" type="TileMap" parent="."]
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 2147483652
+collision_mask = 4
+format = 1
+tile_data = PoolIntArray( 786449, 9, 0, 786450, 3, 0, 786453, 0, 0, 786454, 9, 0, 786455, 1, 0, 851986, 8, 0, 851987, 9, 0, 851988, 9, 0, 851989, 10, 0 )
+script = ExtResource( 13 )
+previous = NodePath("../../world_1/pedestal_two_type_a")
+
+[node name="door" parent="." instance=ExtResource( 4 )]
+light_mask = 3
+position = Vector2( 392, 208 )
+previous = NodePath("../../world_1/pedestal_two_type_a")
+
+[node name="sign" parent="." instance=ExtResource( 7 )]
+position = Vector2( 40, 216 )
+
+[node name="sign2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 216 )
+
+[node name="sign3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 216, 200 )
+
+[node name="sign4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 200, 72 )
+
+[node name="sign5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 216 )
+
+[node name="player" parent="." groups=[
+"player",
+] instance=ExtResource( 8 )]
+light_mask = 0
+position = Vector2( 32, 192 )
+
+[node name="gate_not" parent="." groups=[
+"gate",
+"gates_not",
+] instance=ExtResource( 1 )]
+position = Vector2( 232, 72 )
+
+[node name="gate_not2" parent="gate_not" groups=[
+"gate",
+"gates_not",
+] instance=ExtResource( 1 )]
+visible = false
+position = Vector2( -96, -56 )
+collision_mask = 2147483650
+
+[node name="pedestal_two_type_a" parent="." groups=[
+"pedestal",
+] instance=ExtResource( 2 )]
+position = Vector2( 264, 200 )
+input = false
+
+[node name="dialog_text" parent="." instance=ExtResource( 3 )]
+position = Vector2( -240, -40 )
+previous = NodePath("../../world_1/sign")
+
+[node name="Label" parent="dialog_text" index="1"]
+margin_right = 242.0
+margin_bottom = 38.0
+text = "Logicæ é um jogo educacional sobre portas e circuitos lógicos.
+Mova e pule o seu personagem com os botões de setas.
+Leia as placas espelhadas nas fases, elas te guiarão."
+
+[node name="dialog_text2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -240, 8 )
+previous = NodePath("../../world_1/sign2")
+
+[node name="Label" parent="dialog_text2" index="1"]
+text = "Atente-se aos fios que ligam os circuitos dos pedestais, eles indicam
+o estado da corrente elétrica. A luz do fio acende quando a saída do 
+circuito é “verdadeiro”, e a luz do fio apaga quando a saída é \"falso\". 
+Siga os fios para saber quais pedestais se conectam."
+
+[node name="dialog_text3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -240, 56 )
+previous = NodePath("../../world_1/sign3")
+
+[node name="Label" parent="dialog_text3" index="1"]
+text = "Isso à frente é um pedestal. Ele é o local onde você colocará as portas
+lógicas. Atente-se nas luzes vermelhas dos pedestais. Elas indicam se 
+as entradas e saídas dos circuitos são \"verdadeiro\" ou “falso”. Coloque 
+as portas lógicas nos pedestais para completar o circuito."
+
+[node name="dialog_text4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -240, 104 )
+previous = NodePath("../../world_1/sign4")
+
+[node name="Label" parent="dialog_text4" index="1"]
+text = "Isso é uma porta lógica NOT, negação ou inversora. Usando a porta NOT,
+a saída do circuito tem o valor inverso da entrada. Use o botão de espaço,
+bola, para segurar a porta NOT, leve até o pedestal e solte-a com 
+o botão de espaço, bola."
+
+[node name="dialog_text5" parent="." instance=ExtResource( 3 )]
+position = Vector2( -240, 152 )
+previous = NodePath("../../world_1/sign5")
+
+[node name="Label" parent="dialog_text5" index="1"]
+text = "Esse é o portal para a próxima fase. Atente-se para a esfera 
+encima do portal. Seu objetivo é acendê-la. Para isso, a saída do último 
+circuito deve ser \"verdadeiro\" e todos os pedestais estarem ocupados."
+
+[node name="pause" parent="." instance=ExtResource( 9 )]
+
+[editable path="dialog_text"]
+
+[editable path="dialog_text2"]
+
+[editable path="dialog_text3"]
+
+[editable path="dialog_text4"]
+
+[editable path="dialog_text5"]

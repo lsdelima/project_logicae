@@ -1,26 +1,36 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://player.gd" type="Script" id=1]
-[ext_resource path="res://sprites/game/industrial/industrial.v2.png" type="Texture" id=2]
+[ext_resource path="res://scr/actors/player.gd" type="Script" id=1]
+[ext_resource path="res://assets/art/game/sprites/industrial/industrial.v2.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/game/sprites/custom/light.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/audio/sfx/jump.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/art/menu_and_ui/ui/button_left.png" type="Texture" id=5]
+[ext_resource path="res://assets/art/menu_and_ui/ui/press_button_left.png" type="Texture" id=6]
+[ext_resource path="res://assets/art/menu_and_ui/ui/button_right.png" type="Texture" id=7]
+[ext_resource path="res://assets/art/menu_and_ui/ui/press_button_right.png" type="Texture" id=8]
+[ext_resource path="res://assets/art/menu_and_ui/ui/sprite_up.png" type="Texture" id=9]
+[ext_resource path="res://assets/art/menu_and_ui/ui/press_sprite_up.png" type="Texture" id=10]
+[ext_resource path="res://assets/art/menu_and_ui/ui/sprite_action.png" type="Texture" id=11]
+[ext_resource path="res://assets/art/menu_and_ui/ui/press_sprite_action.png" type="Texture" id=12]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 4.5
 height = 4.0
 
 [sub_resource type="Animation" id=2]
-resource_name = "fall"
-length = 0.5
+length = 0.1
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:frame_coords")
 tracks/0/interp = 2
-tracks/0/loop_wrap = true
+tracks/0/loop_wrap = false
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 5, 16 ), Vector2( 6, 16 ), Vector2( 7, 16 ) ]
+"values": [ Vector2( 2, 17 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -40,7 +50,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-length = 0.8
+length = 0.1
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite:frame_coords")
@@ -49,10 +59,10 @@ tracks/0/loop_wrap = false
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 16 ), Vector2( 1, 16 ), Vector2( 2, 16 ), Vector2( 3, 16 ), Vector2( 4, 16 ), Vector2( 5, 16 ), Vector2( 6, 16 ), Vector2( 7, 16 ) ]
+"values": [ Vector2( 0, 17 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -72,14 +82,18 @@ tracks/0/keys = {
 }
 
 [node name="player" type="KinematicBody2D"]
-position = Vector2( 292.018, 50.5372 )
+position = Vector2( 128, 72 )
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = Vector2( 150, 475 )
 
 [node name="sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 vframes = 32
 hframes = 32
-frame = 513
+frame = 512
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.50058, 1.49397 )
@@ -93,7 +107,52 @@ anims/run = SubResource( 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.75, 0.75 )
+zoom = Vector2( 0.6, 0.6 )
 
 [node name="Position2D" type="Position2D" parent="Camera2D"]
-position = Vector2( -0.50058, -25.8478 )
+position = Vector2( 0, -25 )
+
+[node name="dialog" type="Position2D" parent="Camera2D"]
+position = Vector2( -120, -65 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+energy = 0.6
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -25.0
+
+[node name="ui" type="CanvasLayer" parent="."]
+
+[node name="left" type="TouchScreenButton" parent="ui"]
+position = Vector2( 24, 180 )
+scale = Vector2( 2.5, 2.5 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 6 )
+action = "ui_left"
+visibility_mode = 1
+
+[node name="right" type="TouchScreenButton" parent="ui"]
+position = Vector2( 80, 180 )
+scale = Vector2( 2.5, 2.5 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 8 )
+action = "ui_right"
+visibility_mode = 1
+
+[node name="up" type="TouchScreenButton" parent="ui"]
+position = Vector2( 360, 180 )
+scale = Vector2( 2.5, 2.5 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 10 )
+action = "ui_up"
+visibility_mode = 1
+
+[node name="action" type="TouchScreenButton" parent="ui"]
+position = Vector2( 304, 180 )
+scale = Vector2( 2.5, 2.5 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 12 )
+action = "ui_action"
+visibility_mode = 1

@@ -1,0 +1,99 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scr/objects/pedestal_three_type_b.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scr/objects/pedestal_three_type_a.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scr/objects/gate_xnor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scr/level/door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scr/level/background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scr/level/door_final.gd" type="Script" id=6]
+[ext_resource path="res://scr/actors/player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scr/level/plataform_auto.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scr/level/wire_activated.tres" type="TileSet" id=11]
+[ext_resource path="res://assets/art/game/tileset/game.tres" type="TileSet" id=12]
+[ext_resource path="res://scr/level/wire_activated.gd" type="Script" id=13]
+[ext_resource path="res://scr/level/wire_disabled.tres" type="TileSet" id=14]
+[ext_resource path="res://scr/user_interface/pause.tscn" type="PackedScene" id=16]
+
+[node name="world_27" type="Node"]
+
+[node name="background" parent="." instance=ExtResource( 5 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 3
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( -262144, 4, 0, -262143, 5, 0, -262142, 5, 0, -262141, 5, 0, -262140, 5, 0, -262139, 5, 0, -262138, 5, 0, -262137, 5, 0, -262136, 5, 0, -262135, 5, 0, -262134, 4, 0, -262133, 5, 0, -262132, 5, 0, -262131, 5, 0, -262130, 5, 0, -262129, 5, 0, -262128, 5, 0, -262127, 6, 0, -262126, 1073741829, 0, -262125, 1073741829, 0, -262124, 1073741829, 0, -262123, 1073741829, 0, -262122, 1073741829, 0, -262121, 1073741829, 0, -262120, 1073741829, 0, -262119, 1073741829, 0, -262118, 1073741830, 0, -196608, 4, 0, -196607, 5, 0, -196606, 5, 0, -196605, 5, 0, -196604, 5, 0, -196603, 5, 0, -196602, 5, 0, -196601, 5, 0, -196600, 5, 0, -196599, 5, 0, -196598, 5, 0, -196597, 5, 0, -196596, 5, 0, -196595, 5, 0, -196594, 5, 0, -196593, 5, 0, -196592, 5, 0, -196591, 1073741829, 0, -196590, 1073741829, 0, -196589, 1073741829, 0, -196588, 1073741829, 0, -196587, 1073741829, 0, -196586, 1073741829, 0, -196585, 1073741829, 0, -196584, 1073741829, 0, -196583, 1073741829, 0, -196582, 1073741830, 0, -131072, 7, 0, -131046, 1073741831, 0, -65536, 7, 0, -65510, 1073741831, 0, 0, 7, 0, 26, 1073741831, 0, 65536, 7, 0, 65562, 1073741831, 0, 131072, 4, 0, 131073, 536870914, 0, 131074, 536870914, 0, 131075, 536870914, 0, 131076, 536870914, 0, 131077, 536870914, 0, 131078, 536870914, 0, 131079, 536870914, 0, 131080, 536870914, 0, 131081, 536870914, 0, 131082, 536870912, 0, 131088, 536870915, 0, 131089, 536870913, 0, 131090, 536870913, 0, 131091, 536870913, 0, 131092, 536870913, 0, 131093, 536870913, 0, 131094, 536870913, 0, 131095, 536870913, 0, 131096, 536870913, 0, 131097, 536870913, 0, 131098, 6, 0, 196608, 4, 0, 196609, 5, 0, 196610, 5, 0, 196611, 5, 0, 196612, 5, 0, 196613, 5, 0, 196614, 5, 0, 196615, 5, 0, 196616, 5, 0, 196617, 5, 0, 196618, 6, 0, 196624, 4, 0, 196625, 5, 0, 196626, 5, 0, 196627, 5, 0, 196628, 5, 0, 196629, 5, 0, 196630, 5, 0, 196631, 5, 0, 196632, 5, 0, 196633, 5, 0, 196634, 6, 0, 262144, 7, 0, 262153, 4, 0, 262154, 6, 0, 262160, 7, 0, 262161, 6, 0, 262170, 7, 0, 327680, 7, 0, 327689, 4, 0, 327690, 6, 0, 327696, 7, 0, 327697, 6, 0, 327706, 7, 0, 393216, 7, 0, 393225, 4, 0, 393226, 6, 0, 393232, 7, 0, 393233, 6, 0, 393242, 7, 0, 458752, 7, 0, 458761, 4, 0, 458762, 6, 0, 458768, 4, 0, 458769, 6, 0, 458778, 7, 0, 524288, 7, 0, 524314, 7, 0, 589824, 7, 0, 589836, 20, 0, 589837, 37, 0, 589838, 21, 0, 589850, 7, 0, 655360, 7, 0, 655386, 7, 0, 720896, 7, 0, 720922, 7, 0, 786432, 7, 0, 786458, 7, 0, 851968, 7, 0, 851977, 0, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 3, 0, 851994, 7, 0, 917504, 4, 0, 917505, 1, 0, 917506, 1, 0, 917507, 1, 0, 917508, 1, 0, 917509, 1, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 5, 0, 917514, 5, 0, 917515, 5, 0, 917516, 5, 0, 917517, 5, 0, 917518, 5, 0, 917519, 5, 0, 917520, 5, 0, 917521, 5, 0, 917522, 2, 0, 917523, 2, 0, 917524, 2, 0, 917525, 2, 0, 917526, 2, 0, 917527, 2, 0, 917528, 2, 0, 917529, 2, 0, 917530, 6, 0 )
+
+[node name="TileMap3" type="TileMap" parent="."]
+tile_set = ExtResource( 14 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 458760, 0, 0, 458770, 3, 0, 524296, 8, 0, 524297, 9, 0, 524298, 9, 0, 524299, 3, 0, 524303, 0, 0, 524304, 9, 0, 524305, 9, 0, 524306, 10, 0, 589835, 4, 0, 589839, 4, 0, 655371, 4, 0, 655375, 4, 0, 720907, 4, 0, 720911, 4, 0, 786439, 0, 0, 786440, 9, 0, 786441, 9, 0, 786442, 9, 0, 786443, 4, 0, 786444, 1073741833, 0, 786445, 1073741833, 0, 786446, 1073741833, 0, 786447, 4, 0, 786448, 1073741833, 0, 786449, 1073741825, 0, 786450, 1073741834, 0, 851975, 4, 0, 851986, 8, 0, 851987, 9, 0, 851988, 9, 0, 851989, 9, 0, 851990, 9, 0, 851991, 9, 0 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 458770, 3, 0, 524303, 0, 0, 524304, 9, 0, 524305, 9, 0, 524306, 10, 0, 589839, 4, 0, 655375, 4, 0, 720911, 4, 0, 786447, 4, 0 )
+
+[node name="TileMap5" type="TileMap" parent="."]
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 786444, 1073741833, 0, 786445, 1073741833, 0, 786446, 1073741833, 0 )
+script = ExtResource( 13 )
+previous = NodePath("../../world_27/pedestal_three_type_a")
+
+[node name="TileMap4" type="TileMap" parent="."]
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 786448, 1073741833, 0, 786449, 1073741825, 0, 786450, 1073741834, 0, 851986, 1073741824, 0, 851987, 1073741833, 0, 851988, 1073741833, 0, 851989, 1073741833, 0, 851990, 1073741833, 0, 851991, 1073741833, 0 )
+script = ExtResource( 13 )
+previous = NodePath("../../world_27/pedestal_three_type_b")
+
+[node name="door" parent="." instance=ExtResource( 4 )]
+position = Vector2( 392, 208 )
+script = ExtResource( 6 )
+previous = NodePath("../pedestal_three_type_b")
+
+[node name="plataform_auto" parent="." instance=ExtResource( 10 )]
+position = Vector2( 208, 38.1176 )
+
+[node name="player" parent="." groups=[
+"player",
+] instance=ExtResource( 8 )]
+light_mask = 0
+position = Vector2( 40, 216 )
+
+[node name="gate_xnor" parent="." groups=[
+"gate",
+"gates_xnor",
+] instance=ExtResource( 3 )]
+position = Vector2( 392, 8 )
+
+[node name="gate_xnor2" parent="." groups=[
+"gate",
+"gates_xnor",
+] instance=ExtResource( 3 )]
+position = Vector2( 40, 8 )
+
+[node name="pedestal_three_type_a" parent="." groups=[
+"pedestal",
+] instance=ExtResource( 2 )]
+light_mask = -2147483646
+position = Vector2( 184, 200 )
+input = false
+input_2 = false
+
+[node name="pedestal_three_type_b" parent="." groups=[
+"pedestal",
+] instance=ExtResource( 1 )]
+position = Vector2( 248, 200 )
+previous = NodePath("../../world_27/pedestal_three_type_a")
+
+[node name="pause" parent="." instance=ExtResource( 16 )]
+
+[editable path="plataform_auto"]
