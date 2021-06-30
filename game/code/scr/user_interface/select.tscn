@@ -51,8 +51,8 @@ __meta__ = {
 }
 
 [node name="SpinBox" type="SpinBox" parent="_select/HBoxContainer"]
-margin_left = 41.0
-margin_right = 115.0
+margin_left = 32.0
+margin_right = 106.0
 margin_bottom = 32.0
 theme = ExtResource( 1 )
 min_value = 1.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logo_lataria.png-834d754e81ea400451ffeebc69268ae2.stex"
+path="res://.import/logo_ifba.jpg-64c699a36920e16e434f01f481a50483.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/menu_and_ui/logo_latarias/logo_end/logo_lataria.png"
-dest_files=[ "res://.import/logo_lataria.png-834d754e81ea400451ffeebc69268ae2.stex" ]
+source_file="res://assets/art/menu_and_ui/logo_ifba/logo_end/logo_ifba.jpg"
+dest_files=[ "res://.import/logo_ifba.jpg-64c699a36920e16e434f01f481a50483.stex" ]
 
 [params]
 

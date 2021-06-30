@@ -3,10 +3,10 @@
 [ext_resource path="res://assets/art/game/sprites/industrial/industrial.v2.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 4 )
+extents = Vector2( 24, 14 )
 
 [sub_resource type="Animation" id=2]
-length = 9.0
+length = 12.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -15,7 +15,7 @@ tracks/0/loop_wrap = false
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 4.6, 9 ),
+"times": PoolRealArray( 0, 6, 12 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 208, 104 ), Vector2( 208, -16 ), Vector2( 208, 104 ) ]
@@ -48,7 +48,7 @@ region_enabled = true
 region_rect = Rect2( 288, 0, 16, 16 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 8, -4 )
+position = Vector2( 8, 6 )
 shape = SubResource( 1 )
 one_way_collision = true
 

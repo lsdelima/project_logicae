@@ -27,27 +27,25 @@ margin_top = 48.0
 margin_right = 384.0
 margin_bottom = 200.0
 theme = ExtResource( 1 )
-text = "Grupo Baiano de Inovação e Tecnologia - GBIT
-
-Laboratório de Automação, Tecnologia Assistiva, Robótica e Inteligência Artificial - LATARIA
-
-Desenvolvedores:
-Luís Ricardo Santos de Lima
-Kalyf Abdalla Buzar Lima
-
-Fontes:
-Kenny
-Matt McInerney
-
-Soundtrack:
-Cathran Music
-Harvey656
+text = "Desenvolvedores:
+  - Luís Ricardo Santos de Lima
+  - Kalyf Abdalla Buzar Lima
 
 Sprites:
-Robert Norenberg
+  - Robert Norenberg 
 
-Tema:
-MugenTwo"
+Tema da interface:
+  - MugenTwo
+
+Tipografia:
+  - Kenny
+  - Matt McInerney
+
+Trilha sonora:
+  - Cathran Music
+  - Harvey656
+
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
