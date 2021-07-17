@@ -98,7 +98,7 @@ margin_right = 242.0
 margin_bottom = 38.0
 text = "Logicæ é um jogo educacional sobre portas e circuitos lógicos.
 Mova e pule o seu personagem com os botões de setas.
-Leia as placas espelhadas nas fases, elas te guiarão."
+Leia as placas espalhadas nos níveis, elas te guiarão."
 
 [node name="dialog_text2" parent="." instance=ExtResource( 3 )]
 position = Vector2( -240, 8 )
