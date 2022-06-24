@@ -1,5 +1,5 @@
 <p align = "center">
- <img src= "https://github.com/HarryPorco/project_logicae/game/sprites/menu_and_ui/logo_logicae/logo_end/git_hub.png/">
+ <img src= "https://github.com/lsdelima/project_logicae/game/code/assets/art/menu_and_ui/logo_logicae/logo_end/git_hub3.png">
 </p>
 
 ----------------------------
