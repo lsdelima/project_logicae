@@ -7,8 +7,7 @@
 
 <img src="https://img.shields.io/static/v1?label=Godot+Game+engine&labelColor=478CBF&message=3.2&color=000000&logo=&logoColor=ffffff&style=square" alt=""/>
 
-Um jogo educativo sobre portas lógicas (An educational game about logic gates) 
-
+Explore, descubra e monte circuitos lógicos de forma lúdica e interativa. Aprenda a fucionalidade das portas lógicas: AND, OR, XOR, NOT, NAND, NOR e XNOR.
 
 ### 👨‍💻 Desenvolvedores (Developers):
   - Luís Ricardo Santos de Lima
@@ -27,4 +26,7 @@ Um jogo educativo sobre portas lógicas (An educational game about logic gates)
 ### 🎵 Trilha sonora (Soundtrack):
   - Cathran Music
   - Harvey656
+  
+### 🔎 Logicæ: Um jogo educativo sobre portas lógicas (Artigo):
+  - https://doi.org/10.5753/ercemapi.2021.17909
 
