@@ -7,7 +7,9 @@
 
 <img src="https://img.shields.io/static/v1?label=Godot+Game+engine&labelColor=478CBF&message=3.2&color=000000&logo=&logoColor=ffffff&style=square" alt=""/>
 
-Explore, descubra e monte circuitos lógicos de forma lúdica e interativa. Aprenda a fucionalidade das portas lógicas: AND, OR, XOR, NOT, NAND, NOR e XNOR.
+> **🎮  Explore, descubra e monte circuitos lógicos de forma lúdica e interativa.**
+
+> **🎮  Aprenda a funcionalidade das portas lógicas: AND, OR, XOR, NOT, NAND, NOR e XNOR.**
 
 ### 👨‍💻 Desenvolvedores (Developers):
   - Luís Ricardo Santos de Lima
