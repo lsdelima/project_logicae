@@ -29,6 +29,6 @@
   - Cathran Music
   - Harvey656
   
-### 🔎 Logicæ: Um jogo educativo sobre portas lógicas (Artigo):
+### 🔎 Logicæ: Um jogo educativo sobre portas lógicas (Artigo/Article):
   - https://doi.org/10.5753/ercemapi.2021.17909
 
